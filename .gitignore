@@ -47,3 +47,4 @@ override.tf.json
 
 # Docker test artifacts
 docker-publish.sh
+node_modules
