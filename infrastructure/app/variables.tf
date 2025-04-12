@@ -28,3 +28,21 @@ variable "weather_api_key" {
   type        = string
   sensitive   = true
 }
+
+variable "acr_name" {
+  description = "Name of the Azure Container Registry"
+  type        = string
+  
+}
+
+variable "image_name" { 
+  description = "Name of the Docker image to deploy"
+  type        = string
+  default     = "remix-weather"
+}
+
+variable "redis_hostname" {
+  description = "Hostname of the Redis cache"
+  type        = string
+  default     = "redis-cache"
+}

@@ -37,7 +37,6 @@ module "app" {
   resource_group_name = var.resource_group_name
   location            = var.location
   resource_prefix     = var.resource_prefix
-
   acr_name            = var.acr_name
   acr_login_server    = var.acr_login_server
   image_name          = var.image_name
