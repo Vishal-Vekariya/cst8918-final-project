@@ -11,7 +11,7 @@ resource "azurerm_container_registry" "acr" {
 }
 
 resource "azurerm_redis_cache" "redis" {
-  name                = "var.redis_hostname"
+  name                = "redis-parm0100"
   location            = var.location
   resource_group_name = var.resource_group_name
   capacity            = 0

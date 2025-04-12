@@ -61,3 +61,19 @@ variable "redis_hostname" {
   type        = string
   default     = "redis-cache"
 }
+
+variable "service_cidr" {
+  description = "Service CIDR range for AKS networking"
+  type        = string
+  default     = "10.10.0.0/16"
+}
+
+variable "dns_service_ip" {
+  description = "DNS service IP address"
+  type        = string
+  default     = "10.10.0.10"
+}
+variable "subnet_id" {
+  description = "Subnet ID for AKS node pool"
+  type        = string
+}

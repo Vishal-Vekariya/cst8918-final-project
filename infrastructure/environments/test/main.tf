@@ -1,6 +1,3 @@
-provider "azurerm" {
-  features {}
-}
 
 provider "kubernetes" {
   host                   = module.aks.kube_config["host"]
@@ -31,6 +28,7 @@ module "aks" {
   service_cidr     = "10.10.0.0/16"
   dns_service_ip   = "10.10.0.10"
 }
+
 
 module "app" {
   source              = "../../app"

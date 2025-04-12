@@ -2,17 +2,19 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~> 3.0"
+      version = ">= 3.70.0, < 4.0.0" # known to avoid bad preview versions
     }
   }
 }
 
 provider "azurerm" {
   features {}
+  subscription_id = "1a090018-ec06-40f5-a2ce-cce51e825f21" # your correct sub ID
 }
 
+
 resource "azurerm_kubernetes_cluster" "aks" {
-  name                = "${var.env_name}-aks-cluster"
+  name                = "test-aks-cluster"
   location            = var.location
   resource_group_name = var.resource_group_name
   dns_prefix          = "${var.env_name}-aks"
